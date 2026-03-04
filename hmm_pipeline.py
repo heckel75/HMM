@@ -706,7 +706,7 @@ def run_pipeline():
     
     # --- Load your real data ---
     print("\n📊 STEP 1: LOADING REAL LOTTERY DATA")
-    df = pd.read_csv('data.csv')
+    df = pd.read_csv('Data.csv')
     draws = df[['n1','n2','n3','n4','n5']].values
     true_states = None  # We don't know the true states
     print(f"   Loaded {len(draws)} draws")
