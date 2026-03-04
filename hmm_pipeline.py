@@ -698,15 +698,18 @@ def run_pipeline():
     print("╚" + "═" * 68 + "╝")
     
     # --- Generate data (replace with your real data loading) ---
-    print("\n📊 STEP 1: GENERATING SYNTHETIC DATA")
-    print("   (Replace this with your real lottery data)")
-    draws, true_states, favored_numbers = generate_rigged_lottery(n_draws=1000)
-    print(f"   Generated {len(draws)} draws, 6 numbers each (1-49)")
-    print(f"   Hidden favored numbers: {favored_numbers}")
+    # print("\n📊 STEP 1: GENERATING SYNTHETIC DATA")
+    # print("   (Replace this with your real lottery data)")
+    # draws, true_states, favored_numbers = generate_rigged_lottery(n_draws=1000)
+    # print(f"   Generated {len(draws)} draws, 6 numbers each (1-49)")
+    # print(f"   Hidden favored numbers: {favored_numbers}")
     
-    # To load real data instead, do something like:
-    # df = pd.read_csv('your_lottery_data.csv')
-    # draws = df[['n1','n2','n3','n4','n5','n6']].values
+    # --- Load your real data ---
+    print("\n📊 STEP 1: LOADING REAL LOTTERY DATA")
+    df = pd.read_csv('data.csv')
+    draws = df[['n1','n2','n3','n4','n5','n6']].values
+    true_states = None  # We don't know the true states
+    print(f"   Loaded {len(draws)} draws")
     
     # --- Feature engineering ---
     print("\n📊 STEP 1b: ENGINEERING FEATURES")
