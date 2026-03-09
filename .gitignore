@@ -1,0 +1,8 @@
+# Ignore secret environment variables
+.env
+
+# Ignore Python virtual environments (if you are using Python)
+venv/
+env/
+
+# Ignore Node.js modules (if you are using JavaScript)
